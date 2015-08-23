@@ -8,7 +8,17 @@ class Pessoa():
         return 'Olá sou o %s, eu tenho %s anos de idade' % (nome, self.idade)
 
 
-renzo = Pessoa(32)
+class Homem(Pessoa):
+    def cumprimentar(self, nome):
+        msg = super().cumprimentar(nome)
+        return 'Aperto de mão. %s' % msg
+class Mulher(Pessoa):
+    def cumprimentar(self, nome):
+        msg = super().cumprimentar(nome)
+        return 'Três beijos. %s' % msg
+
+
+renzo = Homem(32)
 osmar = Pessoa(27)
 
 print(type(renzo))
@@ -32,3 +42,6 @@ print(id(Pessoa.olhos))
 renzo.idade = 18
 print(renzo.cumprimentar(nome='Renzo'))
 print(osmar.cumprimentar('Osmar'))
+
+mulher=Mulher()
+print(mulher.cumprimentar('Marli'))
