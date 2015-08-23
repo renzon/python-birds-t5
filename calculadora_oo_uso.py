@@ -1,4 +1,5 @@
-from calculadora_oo import Calculadora, Operacao, CalculadoraInfixa, CalculadoraPrefixa
+from unittest.case import TestCase
+from calculadora_oo import Operacao, CalculadoraPrefixa
 
 
 class Multiplicao():
@@ -8,12 +9,20 @@ class Multiplicao():
 
 multiplicao = Multiplicao()
 
+
+class MultiplicasTests(TestCase):
+    def test_calcular(self):
+        resultado=multiplicao.calcular(2,3)
+        self.assertEqual(6,resultado)
+
+
+
 calculadora = CalculadoraPrefixa()
 calculadora.adicionar_operacao('*', multiplicao)
 
-print(calculadora.executar_operacao('*', 2, 3))
-print(calculadora.executar_operacao('+', 2, 3))
-print(calculadora.executar_operacao('-', 2, 3))
+# print(calculadora.executar_operacao('*', 2, 3))
+# print(calculadora.executar_operacao('+', 2, 3))
+# print(calculadora.executar_operacao('-', 2, 3))
 
 
 class Resto(Operacao):
@@ -27,4 +36,4 @@ calculadora.adicionar_operacao('%', resto)
 
 print(calculadora.executar_operacao('%', 3, 2))
 
-calculadora.calcular_com_inputs()
+# calculadora.calcular_com_inputs()
