@@ -8,7 +8,6 @@ project_dir = path.dirname(__file__)
 project_dir = path.join('..')
 sys.path.append(project_dir)
 
-import unittest
 from unittest.case import TestCase
 from atores import Ator, DESTRUIDO, ATIVO, Obstaculo, Porco, PassaroAmarelo, PassaroVermelho
 
@@ -259,7 +258,7 @@ class PassaroAmareloTests(PassaroBaseTests):
 
     def teste_lacamento_vertical(self):
         """
-        Tests de lançamento vertical. Nele, o passaro só se move verticalmente e sua posição y se matém contanstante
+        Tests de lançamento vertical. Nele, o passaro só se move verticalmente e sua posição x se matém constante
         :return:
         """
         passaro_amarelo = PassaroAmarelo(1, 1)

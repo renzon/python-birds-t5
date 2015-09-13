@@ -10,10 +10,10 @@ class Multiplicao():
 multiplicao = Multiplicao()
 
 
-class MultiplicasTests(TestCase):
-    def test_calcular(self):
-        resultado=multiplicao.calcular(2,3)
-        self.assertEqual(6,resultado)
+# class MultiplicasTests(TestCase):
+#     def test_calcular(self):
+#         resultado=multiplicao.calcular(2,3)
+#         self.assertEqual(6,resultado)
 
 
 
